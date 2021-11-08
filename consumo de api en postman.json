@@ -1,0 +1,296 @@
+{
+	"info": {
+		"_postman_id": "72d30d62-99b3-40e0-a0d0-85666c6d0c54",
+		"name": "Taller 3",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get bookings",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true,
+				"disabledSystemHeaders": {
+					"accept": true
+				}
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"id_period\": 1,\r\n\t\"id_customer\": 3\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://apinodehotel.herokuapp.com/api/v1/booking/",
+					"protocol": "https",
+					"host": [
+						"apinodehotel",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"v1",
+						"booking",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get booking by Id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://apinodehotel.herokuapp.com/api/v1/booking/6181de7af1a8c8ba3f595f8c",
+					"protocol": "https",
+					"host": [
+						"apinodehotel",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"v1",
+						"booking",
+						"6181de7af1a8c8ba3f595f8c"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Store booking",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {}
+			},
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"customerName\": \"Fulano Tal\",\r\n\t\"customerLastname\": \"Megano Sutano\",\r\n\t\"customerPhone\": \"99999999\",\r\n\t\"bookingStartDate\": \"2021-12-09 11:00:00\",\r\n\t\"bookingEndDate\": \"2021-12-11 11:00:00\",\r\n\t\"bookingNumberGuests\": 4\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://apinodehotel.herokuapp.com/api/v1/booking",
+					"protocol": "https",
+					"host": [
+						"apinodehotel",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"v1",
+						"booking"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update booking",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"customerName\": \"Tal Fulanito\",\r\n\t\"customerLastname\": \"Londoño Bedoya\",\r\n\t\"customerPhone\": \"3006306586\",\r\n\t\"bookingStartDate\": \"2021-11-02 15:00:00\",\r\n\t\"bookingEndDate\": \"2021-11-04 15:00:00\",\r\n\t\"bookingNumberGuests\": 3\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://apinodehotel.herokuapp.com/api/v1/booking/6181de7af1a8c8ba3f595f8c",
+					"protocol": "https",
+					"host": [
+						"apinodehotel",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"v1",
+						"booking",
+						"6181de7af1a8c8ba3f595f8c"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete booking",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "https://apinodehotel.herokuapp.com/api/v1/booking/6181c586d8f17ad26b548ce8",
+					"protocol": "https",
+					"host": [
+						"apinodehotel",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"v1",
+						"booking",
+						"6181c586d8f17ad26b548ce8"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get rooms",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://apinodehotel.herokuapp.com/api/v1/room",
+					"protocol": "https",
+					"host": [
+						"apinodehotel",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"v1",
+						"room"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get room by Id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://apinodehotel.herokuapp.com/api/v1/room/6181ca85cfe96f5ff17a28d8",
+					"protocol": "https",
+					"host": [
+						"apinodehotel",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"v1",
+						"room",
+						"6181ca85cfe96f5ff17a28d8"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Store room",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"roomName\": \"Habitación Suite Presidencial\",\r\n\t\"roomDescription\": \"Habitación top mejores 100 del mundo mundial\",\r\n\t\"roomPhoto\": \"https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.cityexpress.com%2Fblog%2Fhotel-innovador-en-el-servicio-al-cliente&psig=AOvVaw0fEkZzy86CHm9TPg6aTimh&ust=1635982264971000&source=images&cd=vfe&ved=0CAsQjRxqFwoTCLi03YLr-vMCFQAAAAAdAAAAABAD\",\r\n\t\"roomAdultPricePerNight\": 900000,\r\n\t\"roomChildPricePerNight\": 300000\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://apinodehotel.herokuapp.com/api/v1/room",
+					"protocol": "https",
+					"host": [
+						"apinodehotel",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"v1",
+						"room"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update room",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"roomName\": \"Habitación Suite Presidencial\",\r\n\t\"roomDescription\": \"Habitación top mejores 100 del mundo mundial\",\r\n\t\"roomPhoto\": \"https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.cityexpress.com%2Fblog%2Fhotel-innovador-en-el-servicio-al-cliente&psig=AOvVaw0fEkZzy86CHm9TPg6aTimh&ust=1635982264971000&source=images&cd=vfe&ved=0CAsQjRxqFwoTCLi03YLr-vMCFQAAAAAdAAAAABAD\",\r\n\t\"roomAdultPricePerNight\": 700000,\r\n\t\"roomChildPricePerNight\": 200000\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://apinodehotel.herokuapp.com/api/v1/room/6181ca85cfe96f5ff17a28d8",
+					"protocol": "https",
+					"host": [
+						"apinodehotel",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"v1",
+						"room",
+						"6181ca85cfe96f5ff17a28d8"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete room",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "https://apinodehotel.herokuapp.com/api/v1/room/6181ca85cfe96f5ff17a28d8",
+					"protocol": "https",
+					"host": [
+						"apinodehotel",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"v1",
+						"room",
+						"6181ca85cfe96f5ff17a28d8"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
